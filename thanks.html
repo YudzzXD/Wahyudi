@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pesan Terkirim!</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      animation: bgFade 5s infinite alternate;
+    }
+
+    @keyframes bgFade {
+      0% { background: linear-gradient(135deg, #89f7fe, #66a6ff); }
+      100% { background: linear-gradient(135deg, #fcb69f, #ffecd2); }
+    }
+
+    .thankyou-card {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 450px;
+      width: 90%;
+      animation: fadeInPop 0.7s ease-out;
+    }
+
+    @keyframes fadeInPop {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .thankyou-card h1 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .thankyou-card p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .back-button {
+      display: inline-block;
+      text-decoration: none;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      color: white;
+      padding: 14px 24px;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+      transition: 0.3s ease;
+    }
+
+    .back-button:hover {
+      opacity: 0.9;
+    }
+
+    .confetti {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: url('https://cdn.jsdelivr.net/gh/HyokjunChoi/confetti/confetti.gif');
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0.3;
+    }
+  </style>
+</head>
+<body>
+  <div class="confetti"></div>
+  <div class="thankyou-card">
+    <h1>🎉 Terima Kasih!</h1>
+    <p>Pesanmu sudah terkirim dengan aman 💌<br>Kami sangat menghargai isi hatimu!</p>
+    <a href="index.html" class="back-button">Kirim Pesan Lagi</a>
+  </div>
+</body>
+</html>
